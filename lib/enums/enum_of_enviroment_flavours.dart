@@ -1,0 +1,1 @@
+enum EnumOfEnviromentFlavours { development, production }

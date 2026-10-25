@@ -1,0 +1,58 @@
+name: product_explorer
+description: "Product Explorer - browse, search and filter a product catalogue (DummyJSON) with BLoC."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
+
+  # state management
+  bloc: ^9.2.1
+  flutter_bloc: ^9.1.1
+  # event transformers: droppable() for pagination, restartable() for search
+  bloc_concurrency: ^0.3.0
+  equatable: ^2.0.7
+
+  # networking
+  http: ^1.5.0
+
+  # typography
+  google_fonts: ^8.2.1
+
+  # price / date formatting
+  intl: ^0.20.2
+
+# path_provider_foundation 2.6.0 dropped its podspec and became a pure-Dart
+# plugin whose `objective_c` framework has to be produced by Dart's
+# native-assets build hooks. That framework never lands in the app bundle here,
+# so anything touching path_provider (google_fonts caches its fonts through it)
+# dies at runtime with:
+#   Failed to load dynamic library 'objective_c.framework/objective_c'
+# 2.5.1 is the last version that still ships a CocoaPods podspec.
+dependency_overrides:
+  path_provider_foundation: 2.5.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
