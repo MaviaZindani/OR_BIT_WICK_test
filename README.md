@@ -22,7 +22,7 @@ a practical test assignment; runs on Android and iOS.
 ## Downloads
 
 Release builds are attached to the
-[v1.0.0 release](https://github.com/MaviaZindani/OR_BIT_WICK_test/releases/tag/v1.0.0):
+[Releases page](https://github.com/MaviaZindani/OR_BIT_WICK_test/releases):
 `ProductExplorer-release.apk` installs directly on Android. The iOS build is
 unsigned (no Apple Developer team on this machine), so it runs from source on
 a simulator; a signed build can be provided through TestFlight on request.
